@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>  
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Meu Portfólio - Área de Trabalho</title>  <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>  
+        <!-- Tela de Boot -->  
+        <div id="boot-screen">    
+            <h1>Iniciando o Windows...</h1>  
+        </div>
+
+        <!-- Área de Trabalho -->  
+        <div id="desktop" class="hidden">    
+            <!-- Imagem de fundo -->    
+            <img src="./assets/sua-foto-de-fundo.jpg" id="background-img" />
+    
+            <!-- Ícones -->    
+            <div class="icon" onclick="openWindow('home')">🧑‍💻<span>Home</span></div>    
+            <div class="icon" onclick="openWindow('github')">🐙<span>GitHub</span></div>    
+            <div class="icon" onclick="openWindow('instagram')">📸<span>Instagram</span></div>    
+            <div class="icon" onclick="openWindow('projetos')">📁<span>Projetos</span></div>
+
+            <!-- Janela - Home -->
+            <div class="window" id="home">      
+                <div class="window-header">        
+                    <span>Home</span>        
+                    <button onclick="closeWindow('home')">X</button>      
+                </div>      
+                <div class="window-body">        
+                    <p>Bem-vindo ao meu portfólio!</p>      
+                </div>    
+            </div>
+
+            <!-- Outras janelas --> 
+            <div class="window" id="github">      
+                <div class="window-header">        
+                    <span>GitHub</span>        
+                    <button onclick="closeWindow('github')">X</button>      
+                </div>      
+                <div class="window-body">        
+                    <a href="https://github.com/omiig" target="_blank">Acessar meu GitHub</a>      
+                </div>    
+            </div>
+
+            <div class="window" id="instagram">
+                <div class="window-header">       
+                    <span>Instagram</span>        
+                    <button onclick="closeWindow('instagram')">X</button>      
+                </div>      
+                <div class="window-body">        
+                    <a href="https://instagram.com/miiglops_" target="_blank">Acessar meu Instagram</a>      
+                </div>    
+            </div>
+            <div class="window" id="projetos">      
+                <div class="window-header">        
+                    <span>Projetos</span>        
+                    <button onclick="closeWindow('projetos')">X</button>      
+                </div>      <div class="window-body">        
+                    <ul>          
+                        <li><a href="ProtectThePlanet/index.html" target="_blank">Protect the Planet (JS)</a></li>          
+                        <li><a href="SnakeGame/index.html" target="_blank">Snake Game</a></li>          
+                        <li><a href="#">Calculadora Java (vídeo)</a></li>          
+                        <li><a href="#">Forca em C (demonstração)</a></li>        
+                    </ul>      
+                </div>    
+            </div>
+
+        <!-- Barra de Tarefas -->    
+        <div id="taskbar">      
+            <div id="taskbar-icons">        
+                <button onclick="openWindow('home')">Iniciar</button>        
+                <button onclick="openWindow('projetos')">Projetos</button>      
+            </div>      
+            <div id="clock"></div>    
+        </div>  
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
